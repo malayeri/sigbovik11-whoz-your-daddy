@@ -1,18 +1,19 @@
+%!TEX TS-program = pdflatex
+
 \documentclass[10pt,twocolumn,letterpaper]{article}
 \usepackage{fullpage}
 \usepackage{hyperref}
 
-\usepackage{fontspec}
 \usepackage{xspace}
-\usepackage{listings}
 \usepackage{textcomp}
 \usepackage{graphicx}
- 
+\usepackage{palatino}
+
 \setlength{\columnsep}{4em}
 
 \begin{document}
 
-\title{Solvin' Concurren' Axcess Issues with Computers, Yo}
+\title{Solvin' Concurren' Axcess Issues wit Computers, Yo}
 
 \author{Dr. Donna M. Malayeri, PhD \and Heather Miller, PhD(c), Esq., PPPoE, P2P \and Herr Doctor Doktor Klaus Haller}
 \date{\today}
@@ -22,7 +23,36 @@
 \pagestyle{empty}
 \thispagestyle{empty}
 
-\abstract{
-}
+\begin{abstract}
+Computer Science research can solve many real-world problems. Here we describe our novel research, Uniqueness Types, and how it applies both to multi-threaded programs and to real world scenarios. In particular, we solve issues that commonly arise in popular daytime sociological science documentaries.\footnote{E.g., The Jerry Springer show.}
+\end{abstract}
+
+\section{Introduction}
+In multi-threaded programs resources such as memory and files are at the same time accessed, i.e., concurrently. This often leads to problems, such as blue screens, not-disappearing hour glasses, the spinning dying color wheel of death and so forth. For example, let's consider a thread program that a file opens, and it accesses. It may happen that yet another threaded process at some later point in time closes the file without the first program knowing about it. If the first program to the file again accesses, then the user may a blue screen experience.
+
+\section{Uniqueness Types}
+To solve the unique problems introduced in the introduction, we introduce a novel language-theoretic type theory called Uniqueness Types. We base our theoretical theory on flow-sensitive linear logic with typestate~\cite{CMUwork}. The idea of our research approach is to assign unique types to pointer variables. A pointer is unique whenever the compiler program knows that all other pointers are pointing towards other datums, or, conversely, if and only if no other pointer is pointing towards it. In predated works computer researchers have published theoretical experiments with unique pointers that sometimes their typestates change.
+
+Unique pointers with uniqueness types give rise to a unique approach to avoid the unique problems of hour glasses and spinning dying color wheel of death. Somehow we can make sure everyone points to the hour glass or something like that. Or no, maybe the thread program must have pointers with unique names.
+
+
+\section{Real-World Scenarios}
+As interesting as these programming problems are, we feel that it is time to apply computer science to real world problems. How else can we, with a straight face, make the claim to funding agencies that we solve real problems that affect people's everyday lives?
+
+We believe that a good source of real-world problems is documentaries, particularly those highly-rated ones that are shown on broadcast television. These informational programs provide an unprecedented view into the daily life of the everyman. For the purposes of this paper, we shall use The Jerry Springer Show as our primary source, though our solution is applicable to scenarios seen on other esteemed  programs, such as The Maury Povich Show or Jersey Shore.
+
+\subsection{Real-World Problem Statement}
+
+\begin{quote}
+So, this one bitch is a real ho fo real and she get wit three playaz, Playa 1, Playa II, and Playa Playaa Playa. And now showty pregnan' and she sez the baby daddy is Playa Playaa Playa and he a pimp.\footnote{This means he has lots of money.} He sho' Playa 1 is da baby daddy fo serious and he don wants to pay no child suppo'. Da ho gots a paternity test dat sez da baby daddy is Play Playaa Playa but he thank it a fake.
+\end{quote}
+
+Here, the problem is access to the shared resource within a critical timeframe. Since the third man does not trust the results of the paternity test, believing the woman to be a ``lyin' ho,'' we need to provide the parties in this scenario with a fool-proof mechanism for determining parentage.
+
+\section{Applicability to Real-World Scenarios}
+\section{Related Work}
+\section{Conclusions and Future Work}
+\section{Acknowledgements}
+Herr Doctor Doktor Klaus provided all of the middle-English-like sentences. The other authors thank him highly for this immense contribution, which would not be possible without a native German speaker.
 
 \end{document}
