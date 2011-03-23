@@ -54,14 +54,14 @@ We believe this problem is widespread, and in the tradition of clever monikers f
 \section{Applicability to Real-World Scenarios}
 It is not immediately obvious how the theoretical results of Uniqueness Types to Who's Your Daddy can be applied. We present here an iterative approach to a solution, starting with a naive solution and refining it to handle all possible scenarios.
 
-\subsection{Solution 1: Metal Locking Device with Physical Key}
+\subsection{Solution 1: H\"{e}\"{a}vy \"{M}\"{e}t\"{a}l Locking Device with Physical Key}
 The problem here is that several pointers the shared resource may access, and her state may at any time change, without it being obvious to any of the parties involved (including the resource herself) that a) the state change has occurred and b) which pointer caused the state change.
 
 We introduce the following protocol:
 \begin{itemize}
 \item An external party outfits the resource with a h\"{e}\"{a}vy \"{m}\"{e}t\"{a}l locking device with a physical key. For instance, the Victorian chastity belt would be quite useful here.
 \item The physical key is retained by the external party for a period of not less than 9 months.
-\item
+\item The first pointer retrieves the key from the external party and may access the device.
 \end{itemize}
 
 
