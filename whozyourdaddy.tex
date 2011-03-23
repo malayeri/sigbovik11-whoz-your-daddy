@@ -49,8 +49,24 @@ So, this one bitch is a real ho fo real and she get wit three playaz, Playa 1, P
 
 Here, the problem is access to the shared resource within a critical timeframe. Since the third man does not trust the results of the paternity test, believing the woman to be a ``lyin' ho,'' we need to provide the parties in this scenario with a fool-proof mechanism for determining parentage.
 
+We believe this problem is widespread, and in the tradition of clever monikers for computer science problems (e.g., Travelling Salesman, Sleeping Barber, Dining Philosophers), we name this problem ``Who's Your Daddy?''
+
 \section{Applicability to Real-World Scenarios}
+It is not immediately obvious how the theoretical results of Uniqueness Types to Who's Your Daddy can be applied. We present here an iterative approach to a solution, starting with a naive solution and refining it to handle all possible scenarios.
+
+\subsection{Solution 1: Metal Locking Device with Physical Key}
+The problem here is that several pointers the shared resource may access, and her state may at any time change, without it being obvious to any of the parties involved (including the resource herself) that a) the state change has occurred and b) which pointer caused the state change.
+
+We introduce the following protocol:
+\begin{itemize}
+\item An external party outfits the resource with a h\"{e}\"{a}vy \"{m}\"{e}t\"{a}l locking device with a physical key. For instance, the Victorian chastity belt would be quite useful here.
+\item The physical key is retained by the external party for a period of not less than 9 months.
+\item
+\end{itemize}
+
+
 \section{Related Work}
+
 \section{Conclusions and Future Work}
 \section{Acknowledgements}
 Herr Doctor Doktor Klaus provided all of the middle-English-like sentences. The other authors thank him highly for this immense contribution, which would not be possible without a native German speaker.
