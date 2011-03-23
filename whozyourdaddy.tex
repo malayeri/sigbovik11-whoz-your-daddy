@@ -13,7 +13,7 @@
 
 \begin{document}
 
-\title{Solvin' Concurren' Axcess Issues wit Computers, Yo}
+\title{The ``Who's Yo Daddy?'' Problem \\ \Large{Or: Solvin' Concurren' Axcess Issues wit Computers, Yo}}
 
 \author{Dr. Donna M. Malayeri, PhD \and Heather Miller, PhD(c), Esq., PPPoE, P2P \and Herr Doctor Doktor Klaus Haller}
 \date{\today}
@@ -33,8 +33,7 @@ In multi-threaded programs resources such as memory and files are at the same ti
 \section{Uniqueness Types}
 To solve the unique problems introduced in the introduction, we introduce a novel language-theoretic type theory called Uniqueness Types. We base our theoretical theory on flow-sensitive linear logic with typestate~\cite{CMUwork}. The idea of our research approach is to assign unique types to pointer variables. A pointer is unique whenever the compiler program knows that all other pointers are pointing towards other datums, or, conversely, if and only if no other pointer is pointing towards it. In predated works computer researchers have published theoretical experiments with unique pointers that sometimes their typestates change.
 
-Unique pointers with uniqueness types give rise to a unique approach to avoid the unique problems of hour glasses and spinning dying color wheel of death. Somehow we can make sure everyone points to the hour glass or something like that. Or no, maybe the thread program must have pointers with unique names.
-
+Unique pointers with uniqueness types give rise to a unique approach to avoid the unique problems of hour glasses and spinning dying color wheel of death. Somehow we can make sure everyone points to the hour glass or something like that. Or no, maybe the thread program must have pointers with unique names.\footnote{Americanadian translation: if two threads access the same resource, say a file, it would be bad if one thread opened the file, then the other thread closed the file, then the first thread tried to then read from the file. Essentially, threads with pointers to a shared resource need to know about state changes that may affect future operations on that resource. A uniqueness type solves this problem, and you can read more about it in this boring---er, exciting---research paper \cite{philipp}.}
 
 \section{Real-World Scenarios}
 As interesting as these programming problems are, we feel that it is time to apply computer science to real world problems. How else can we, with a straight face, make the claim to funding agencies that we solve real problems that affect people's everyday lives?
@@ -52,7 +51,7 @@ Here, the problem is access to the shared resource within a critical timeframe. 
 We believe this problem is widespread, and in the tradition of clever monikers for computer science problems (e.g., Travelling Salesman, Sleeping Barber, Dining Philosophers), we name this problem ``Who's Your Daddy?''
 
 \section{Applicability to Real-World Scenarios}
-It is not immediately obvious how the theoretical results of Uniqueness Types to Who's Your Daddy can be applied. We present here an iterative approach to a solution, starting with a naive solution and refining it to handle all possible scenarios.
+It is not immediately obvious how the theoretical results of Uniqueness Types to Who's Your Daddy can be applied. We present here an iterative approach to a solution, starting with a na\"{i}ve solution and refining it to handle all possible scenarios.
 
 \subsection{Solution 1: H\"{e}\"{a}vy \"{M}\"{e}t\"{a}l Locking Device with Physical Key}
 The problem here is that several pointers the shared resource may access, and her state may at any time change, without it being obvious to any of the parties involved (including the resource herself) that a) the state change has occurred and b) which pointer caused the state change.
@@ -60,10 +59,19 @@ The problem here is that several pointers the shared resource may access, and he
 We introduce the following protocol:
 \begin{itemize}
 \item An external party outfits the resource with a h\"{e}\"{a}vy \"{m}\"{e}t\"{a}l locking device with a physical key. For instance, the Victorian chastity belt would be quite useful here.
-\item The physical key is retained by the external party for a period of not less than 9 months.
-\item The first pointer retrieves the key from the external party and may access the device.
+\item The physical key is retained by the external party for an incubation period of not less than 9 months.
+\item The first pointer retrieves the key from the external party and may access the resource.
+\item When the first pointer is finished with the resource, he or she returns the key to the external party.
+\item The incubation period is again started and the process repeats itself.
 \end{itemize}
 
+However, this na\"{i}ve approach is fraught with issues. The pointer who has the key in his or her possession may initiate an ownership transfer, either wanted or unwanted (i.e., in cases of theft). Moreover, borrowing re-introduces the same race condition that the protocol had attempted to eliminate. Thus, anyone with a copy of the key to the h\"{e}\"{a}vy \"{m}\"{e}t\"{a}l locking device may be the future Baby Daddy, which again leaves the question unresolved: Who's Your Daddy?
+
+\subsection{Solution 2: H\"{e}\"{a}vy \"{M}\"{e}t\"{a}l Locking Device with Biometric Key}
+This solution is similar to the first, except the pointer is the access key. However, this means that once a particular pointer has accessed the resource, she may henceforth never be accessed by any other pointer. This is problematic if the first pointer gets bored and leaves, or is otherwise destroyed.
+
+\subsection{Solution 3: H\"{e}\"{a}vy \"{M}\"{e}t\"{a}l Locking Device with Dynamic Biometric Key}
+This is similar to Solution 2, except now the locking device can be re-keyed by the external party to any particular pointer, assuming that the resource is in the vacant state (which can always be determined once the incubation period has passed).
 
 \section{Related Work}
 
